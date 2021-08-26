@@ -1,14 +1,15 @@
-# TypeScript 笔记
+<img src="./assets/TS.png" alt="alt TS" style="zoom: 33%;" /> **TypeScript 笔记**
+=============
 
 ### 简介
-
 + ###### 以JavaScript为基础构建的语言
 + ###### 是JavaScript的一个超集
 + ###### 可以在任何支持JavaScript的平台中执行
 + ###### 扩展了JavaScript，并添加了类型
 + ###### 不能被JS解析器直接执行
 
-#### TS增加：
+**TS增加**：
+
     类型
     支持ES的新特性
     添加ES不具备的新特性
@@ -18,7 +19,7 @@
 ### TS环境搭建
     全局安装typescript
     npm i -g typescript
-
+    
     执行ts文件
     tsc xxx.ts
 
@@ -40,13 +41,21 @@
     - TS拥有自动的类型判断机制
     - 当对变量的声明和赋值是同时进行的，TS编译器会自动判断变量的类型
     - 所以如果变量的声明和赋值是同时进行，可以省略掉类型声明
-    
-    
+
+
 + 类型
   
-  |    类型   |    例子     |              描述             |
-  | :------:  | :--------: | :--------------------------: |
-  |  number   | 1,-33,2.5  |       任意数字                |
-  |  string   | ‘hello’,he |      任意字符串               |
-  |  boolean  | true false |  布尔值true或false            |
-  |   字面量   |   其本身   |  限制变量的值就是该字面量的值    |
+  |    类型   |    例子     |              描述                   |
+  | :------:  | :--------: | :--------------------------------: |
+  |  number   | 1,-33,2.5        |       任意数字                |
+  |  string   | ‘hello’,he       |      任意字符串               |
+  |  boolean  | true false       |  布尔值true或false            |
+  |   字面量   |   其本身         |  限制变量的值就是该字面量的值    |
+  |   any     |  *              |  任意类型                     |
+  |  unknown  |  *              |  类型安全的any                 |
+  |  void     | 空值(undefined)  | 没有值(或undefined)           |
+  |  never    | 没有值           | 不能是任何值                   |
+  | object    | {name:'Morgan'} | 任意的JS对象                   |
+  | array     | [1,2,3]         | 任意JS数组                     |
+  | tuple     | [4,5]           | 元素，TS新增类型，固定长度数组   |
+  | enum      | enum{A,B}       | 枚举，TS中新增类型              |
