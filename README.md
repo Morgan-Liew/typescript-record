@@ -1,12 +1,22 @@
-<img src="./assets/TS.png" alt="alt TS" style="zoom: 33%;" /> **TypeScript 笔记**
+
+
+<img src="./assets/TS.png" alt="alt TS" style="zoom: 20%;" /> **TypeScript 笔记**
 =============
 
+
 ### 简介
+
 + ###### 以JavaScript为基础构建的语言
+
 + ###### 是JavaScript的一个超集
+
 + ###### 可以在任何支持JavaScript的平台中执行
+
 + ###### 扩展了JavaScript，并添加了类型
+
 + ###### 不能被JS解析器直接执行
+
+  
 
 **TS增加**：
 
@@ -16,14 +26,20 @@
     丰富的配置选项
     强大的开发工具
 
+
+
 ### TS环境搭建
+
     全局安装typescript
     npm i -g typescript
     
     执行ts文件
     tsc xxx.ts
 
+
+
 ### 基本类型
+
 + 类型声明
     - 类型声明是TS非常重要的一个特点
     - 通过类型声明可以指定TS中变量的类型
@@ -45,8 +61,8 @@
 
 + 类型
   
-  |    类型   |    例子     |              描述                   |
-  | :------:  | :--------: | :--------------------------------: |
+  |    类型    |  例子  |                描述                   |
+  | :------: | :--------: | :--------------------------------: |
   |  number   | 1,-33,2.5        |       任意数字                |
   |  string   | ‘hello’,he       |      任意字符串               |
   |  boolean  | true false       |  布尔值true或false            |
@@ -59,3 +75,38 @@
   | array     | [1,2,3]         | 任意JS数组                     |
   | tuple     | [4,5]           | 元素，TS新增类型，固定长度数组   |
   | enum      | enum{A,B}       | 枚举，TS中新增类型              |
+
+### 编译选项
++ 自动编译文件
+  - 编译文件时，使用-w指令胡，TS编译器会自动监视文件的变化，并在文件变化时对文件重新编译
+  - 实例
+    + ```
+      tsc xxx.ts -w
+      ```
+      
++ 自动编译整个项目
+  - 如果直接使用tsc指令，则可以自动将当前项目下的所有ts编译为js文件
+  - 但能直接使用tsc命令的前提是，要现在项目根目录下创建一个ts的配置文件tsconfig.json
+  - tsconfig.json是一个JSON文件，添加配置文件后，只需tsc命令即可完成对整个项目的编译
+  - 配置选项：
+    + include
+      + 定义希望被编译文件所在目录
+      + 默认值：[" ** / *"]
+      + 示例：
+        + ```
+            "include":["src/**/*","tests/**/*"]
+          ```
+        + 所有src目录和tests目录下的文件都会被编译
+      + exclude 
+        + 定义需要排除在外的目录
+        + 默认值：["node_modules","bower_components","jspm_packages"]
+
+------
+> **Author :**  Morgan.Liew    
+> **Email :** morgan_liew@qq.com   
+> **CreatTime :**   2021-08-24 11:37   
+> **UpdateTime :**  2021-08-26 13:58
+
+
+
+
