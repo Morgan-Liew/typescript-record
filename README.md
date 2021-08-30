@@ -79,7 +79,7 @@
 ### 编译选项
 + 自动编译文件
   - 编译文件时，使用-w指令胡，TS编译器会自动监视文件的变化，并在文件变化时对文件重新编译
-  - 实例
+  - 示例
     + ```
       tsc xxx.ts -w
       ```
@@ -100,12 +100,37 @@
       + exclude 
         + 定义需要排除在外的目录
         + 默认值：["node_modules","bower_components","jspm_packages"]
+        + 示例:
+          + ```
+            "exclude":["./src/hello/**/*"]
+            ```
+      + extends 
+        + 定义被继承的配置文件 
+        + ```
+          "extends":["./configs/base"]
+          ```
+      + files 
+        + 指定被编译文件的列表，只有需要编译的文件少时才会用到
+        + 示例：
+          + ```
+            "files":[
+                "core.js",
+                "types.ts",
+                "tsc.ts"
+                ...
+              ]
+            ```
+      + compilerOptions
+        + 编译选项是配置文件中非常重要也比较复杂的配置选项
+        + 在compilerOptions中包含多个子选项，用来完成对编译的配置
+  
 
 ------
 > **Author :**  Morgan.Liew    
 > **Email :** morgan_liew@qq.com   
 > **CreatTime :**   2021-08-24 11:37   
-> **UpdateTime :**  2021-08-26 13:58
+> **Last UpdateTime :**  2021-08-26 13:58  
+> **Lastest UpdateTime :**  2021-08-30 15:00
 
 
 

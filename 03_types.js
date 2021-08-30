@@ -84,3 +84,5 @@ i = {
     gender: Gender.Male
 };
 console.log(i.gender === Gender.Male);
+// & 表示同时
+var j;
