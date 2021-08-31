@@ -7,9 +7,32 @@
           *  表示任意文件
 */
 
+  /*
+    compilerOptions 编译器的选项
+    子选项：
+          target 用来指定ts被编译为的ES版本
+          module 指定要使用的模块化的规范
+          lib    用来指定项目中要是用的库
+          outDir 用来指定编译后文件所在的目录
+          outFile 将代码合并为一个文件
+          allowJs 是否对js文件进行编译，默认为false
+          checkJs 是否检查js代码是否符合语法规范，默认为false
+          removeComments 是否移除注释
+          noEmit 不生成编译后的文件
+          noEmitOnError 当有错误时不生成编译后的文件
+          alwaysStrict  用来设置编译后的文件是否使用严格模式，默认false
+          noImplicitAny  不允许隐式的any类型
+          noImplicitThis 不允许不明确类型的this
+          strictNullChecks 严格的检查空值
+          strict         所有严格检查的总开关
+
+  */
   "compilerOptions": {
-    "target": "es5",
+    "target": "es6",
+//    "module": "es6",
+//    "lib": ["xx"],
 //    "types": ["node"]
+    "outDir":"./dist",
     "typeRoots": ["./typings"]
   },
   "include":[

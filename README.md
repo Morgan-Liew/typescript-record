@@ -83,7 +83,7 @@
     + ```
       tsc xxx.ts -w
       ```
-      
+  
 + 自动编译整个项目
   - 如果直接使用tsc指令，则可以自动将当前项目下的所有ts编译为js文件
   - 但能直接使用tsc命令的前提是，要现在项目根目录下创建一个ts的配置文件tsconfig.json
@@ -124,14 +124,34 @@
         + 编译选项是配置文件中非常重要也比较复杂的配置选项
         + 在compilerOptions中包含多个子选项，用来完成对编译的配置
   
+        子选项：
+          + target
+            + 设置ts代码编译的目标版本
+            + 可选值：
+              + ES3(默认)、ES5、ES6...
+            
+          + module 
+            + 指定要使用的模块化的规范
+            + 可选值：
+              + CommonJS、UMD、AMD...
+            
+          + lib
+            + 指定代码运行时所包含的库(宿主环境)
+            + 可选值：
+              + ES5、ES6/ES2015...
+            
+          + 其他 =>  [check record in tsconfig.json](tsconfig.json)
+  
+        
+            
+  
 
 ------
 > **Author :**  Morgan.Liew    
 > **Email :** morgan_liew@qq.com   
 > **CreatTime :**   2021-08-24 11:37   
-> **Last UpdateTime :**  2021-08-26 13:58  
-> **Lastest UpdateTime :**  2021-08-30 15:00
-
+> **Last UpdateTime :**  2021-08-30 15:00  
+> **Lastest UpdateTime :**  2021-08-31 15:03
 
 
 
