@@ -142,16 +142,34 @@
             
           + 其他 =>  [check record in tsconfig.json](tsconfig.json)
   
-        
-            
+### 面向对象
+
+#### 理解
+面向对象是程序中一个非常重要的思想。
+程序中对象分为两个部分：数据和功能
+
+#### 1.类(class)
+要创建对象，必须要先定义类 => 对象的模型      
+
++ 定义类：
+  - 
+    ```
+    class 类名{
+        属性名:类型;
+  
+        constructor(参数:类型){
+          this.属性名 = 参数;
+        }
+      }
+    ```
   
 
 ------
 > **Author :**  Morgan.Liew    
 > **Email :** morgan_liew@qq.com   
 > **CreatTime :**   2021-08-24 11:37   
-> **Last UpdateTime :**  2021-08-30 15:00  
-> **Lastest UpdateTime :**  2021-08-31 15:03
+> **Last UpdateTime :**  2021-08-31 15:03  
+> **Lastest UpdateTime :**  2021-09-01 14:38
 
 
 
